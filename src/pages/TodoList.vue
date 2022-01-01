@@ -44,6 +44,12 @@
 <script setup lang="ts">
 import { reactive, ref } from 'vue'
 
+const clientHeight = ref(0)
+
+clientHeight.value = document.documentElement.clientHeight - 60 - 40 - 100 - 10
+
+let mainHeight = clientHeight.value + 'px'
+
 const checkList = ref(['selected and disabled', 'Option A'])
 const todoList = reactive([
   {
@@ -84,6 +90,7 @@ const handleAddTodo = () => {
       padding: 20px;
       margin: 10px;
       box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.1);
+      min-height: v-bind('mainHeight');
     }
   }
 }

@@ -19,7 +19,7 @@
       <el-menu-item index="5">Home</el-menu-item>
     </el-menu>
     <div class="user-avatar">
-      <el-avatar src="https://cube.elemecdn.com/0/88/03b0d39583f48206768a7534e55bcpng.png"></el-avatar>
+      <el-avatar src="https://cube.elemecdn.com/0/88/03b0d39583f48206768a7534e55bcpng.png" size="default"></el-avatar>
     </div>
   </div>
   <div class="h-6"></div>
@@ -59,9 +59,9 @@ const handleSelect = (key: string, keyPath: string[]) => {
   position: relative;
   .user-avatar {
     position: absolute;
-    right: 10px;
-    top: 0px;
-    height: 56px;
+    right: 15px;
+    top: 9px;
+    height: 40px;
   }
 }
 </style>
