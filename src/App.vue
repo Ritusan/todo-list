@@ -1,18 +1,26 @@
 <template>
-  <!-- <img alt="Vue logo" src="./assets/logo.png" /> -->
   <!-- <HelloWorld msg="Hello Vue 3 + TypeScript + Vite" /> -->
   <top-bar></top-bar>
-  <router-view></router-view>
-  <my-time></my-time>
+  <div class="main-wrapper">
+    <router-view></router-view>
+  </div>
+  <!-- <my-time></my-time> -->
   
 </template>
 
 <script setup lang="ts">
+import { ref } from 'vue'
 // This starter template is using Vue 3 <script setup> SFCs
 // Check out https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup
-// import HelloWorld from './components/HelloWorld.vue'
 import MyTime from './components/MyTime.vue'
 import TopBar from './components/TopBar.vue'
+
+const clientHeight = ref(0)
+
+clientHeight.value = document.documentElement.clientHeight - 60 - 40
+
+let mainHeight = clientHeight.value + 'px'
+
 </script>
 
 <style>
@@ -22,5 +30,15 @@ import TopBar from './components/TopBar.vue'
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
+}
+body {
+  margin: 0;
+}
+</style>
+
+<style lang="scss" scoped>
+.main-wrapper {
+  padding: 20px;
+  min-height: v-bind('mainHeight');
 }
 </style>
