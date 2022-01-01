@@ -14,5 +14,8 @@ export default defineConfig({
     Components({
       resolvers: [ElementPlusResolver()],
     }),
-  ]
+  ],
+  // resolve: {
+  //   extensions: ['.mjs', '.js', '.ts', '.jsx', '.tsx', '.json', '.vue']
+  // }
 })
