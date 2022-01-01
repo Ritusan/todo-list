@@ -7,6 +7,7 @@ const count = ref(0)
 </script>
 
 <template>
+  <el-button>提交</el-button>
   <h1>{{ msg }}</h1>
 
   <p>
