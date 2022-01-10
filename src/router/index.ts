@@ -4,9 +4,10 @@ const home = () => import('../pages/Home.vue')
 const todolist = () => import('../pages/TodoList.vue')
 const login = () => import('../pages/Login.vue')
 const color = () => import('../pages/Color.vue')
+const music = () => import('../pages/Music.vue')
 
 const routes: Array<RouteRecordRaw> = [
-  { path: '/', redirect: '/home' },
+  { path: '/', redirect: '/todolist' },
   {
     path: '/home',
     name: 'home',
@@ -26,6 +27,11 @@ const routes: Array<RouteRecordRaw> = [
     path: '/color',
     name: 'color',
     component: color,
+  },
+  {
+    path: '/music',
+    name: 'music',
+    component: music,
   },
 ]
 
