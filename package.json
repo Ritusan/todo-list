@@ -1,5 +1,5 @@
 {
-  "name": "todo-list",
+  "name": "todo-list-dev",
   "version": "0.0.2",
   "scripts": {
     "dev": "vite",
