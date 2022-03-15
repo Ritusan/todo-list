@@ -38,7 +38,7 @@ body {
 
 <style lang="scss" scoped>
 .main-wrapper {
-  padding: 20px;
+  padding: 20px 20px 10px 20px;
   min-height: v-bind('mainHeight');
 }
 </style>
